@@ -1,4 +1,8 @@
+import sys
+
 Vo = int(input('vel inicial:'))
+if Vo <=0:
+  sys.exit('informe velocidade positiva')
 tempo = int(input('tempo:'))
 acel = int(input('aceleração:'))
 
