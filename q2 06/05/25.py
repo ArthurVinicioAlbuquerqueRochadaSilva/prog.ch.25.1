@@ -25,4 +25,3 @@ t = (-Vo + delta**0.5) / (2*acel)
  segundo = t % 60
  
  print (f' tempo = {hora} : {minuto} : {segundo}')
-
