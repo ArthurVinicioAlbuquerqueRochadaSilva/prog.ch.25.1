@@ -5,4 +5,4 @@ total = valor
 ced = 100
 totced = valor / ced
 if total >= 100:
-    print('Total de cédulas'.totced)
+    print(f'Total de cédulas: {totced}')
