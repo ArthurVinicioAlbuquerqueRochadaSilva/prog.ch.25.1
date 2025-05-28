@@ -9,4 +9,6 @@ except ValueError:
 
 intMultiplicando = 1
 while intMultiplicando  <= 10:
-        print(f'({x} x {intMultiplicando} = (intM')
+        print(f'{x} x {intMultiplicando} = {x * intMultiplicando}')
+        intMultiplicando += 1 
+print('Fim da Tabuada')
