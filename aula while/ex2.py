@@ -2,16 +2,29 @@
 # x = 80
 # y = 6 
 # p = y + y + y (80 vezes)
+import sys
 
 print(f'Programa para produto')
 
-x = int(input('Informe valor de x: '))
-y = int(input('Informe o valor de y: '))
-p = y * x
-s = 0
+try:
+    x = int(input('Informe valor de x: '))
+    y = int(input('Informe o valor de y: '))
+    p = 0
+    contador = 0
+    while contador <= :
+        p += y
+        contador += 1
 
-while s < p:
-    s += y
-    print("+", y)
 
-print(s)
+    print({x} '')
+
+except ValueError:
+    sys.exit('Não foi informado um valor inteiro válido')
+
+except Exception as e:
+    sys.exit(f'ERRO:{e}')
+else:
+    if x <= 0:
+        sys.exit('Informe valor positivo')
+    if y <= 0:
+        sys.exit('Informe valor válido')

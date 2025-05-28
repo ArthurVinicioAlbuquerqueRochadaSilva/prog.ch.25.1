@@ -6,7 +6,9 @@ base = int(input('Digite o valor da base: '))
 potencia = int(input('Digite o valor da potência: '))
 r = base ** potencia
 p = base
+contador = 1
 while p < r:
     p *= base
+
 
 print(p)
