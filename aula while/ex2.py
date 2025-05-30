@@ -9,22 +9,14 @@ print(f'Programa para produto')
 try:
     x = int(input('Informe valor de x: '))
     y = int(input('Informe o valor de y: '))
-    p = 0
+
+    produto = 0
     contador = 0
-    while contador <= :
-        p += y
+    while contador < x:
+        produto += y
         contador += 1
 
-
-    print({x} '')
+    print(f'{x} x {y} = {produto}' )
 
 except ValueError:
-    sys.exit('Não foi informado um valor inteiro válido')
-
-except Exception as e:
-    sys.exit(f'ERRO:{e}')
-else:
-    if x <= 0:
-        sys.exit('Informe valor positivo')
-    if y <= 0:
-        sys.exit('Informe valor válido')
+    sys.exit('INforme valor válido')

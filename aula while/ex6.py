@@ -7,7 +7,7 @@ except ValueError:
     sys.exit('Digite valor válido')
 
 else:
-    divisor = 2
+    divisor = 1
     contador = 0
     while contador <= num:
         if num % divisor == 0:

@@ -9,6 +9,3 @@ p = base
 contador = 1
 while p < r:
     p *= base
-
-
-print(p)
