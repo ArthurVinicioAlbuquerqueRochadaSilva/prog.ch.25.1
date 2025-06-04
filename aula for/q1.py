@@ -14,5 +14,7 @@ else:
     if num2 <=0:
         sys.exit('Informe valor inteiro positivo')
     
-divisão = num1 // num2
-divisão2 = % // num2
+num1 = int(input('Digite o primeiro número: '))
+num2 = int(input('Digite o segundo número: '))
+
+num1 // num2 = %  
