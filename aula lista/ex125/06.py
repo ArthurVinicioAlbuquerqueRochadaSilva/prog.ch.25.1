@@ -17,5 +17,6 @@ except ValueError:
 except Exception as e:
     sys.exit(f'ERRO:{e}')
 else:
-    numero_inteiro = random.randint(-100, +100)
-    random.choices(population, weights=None, *,  cum_weights=None, k=1)
+    numeros = list(range(-100, 101))
+    lista = random.sample(numeros , intN)
+    print(f'lista:{lista}')
