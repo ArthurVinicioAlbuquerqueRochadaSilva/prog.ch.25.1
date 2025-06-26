@@ -19,4 +19,10 @@ except Exception as e:
 else:
     numeros = list(range(-100, 101))
     lista = random.sample(numeros , intN)
+    lista.sort()
     print(f'lista:{lista}')
+
+    lista_pares = [intN for intN in lista if intN % 2 == 0]
+print("Lista apenas com os números pares:")
+print(lista_pares)
+        
