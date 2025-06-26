@@ -12,15 +12,16 @@ import sys, random
 
 try:
     intN = int(input('Informe o valor de N: '))
+    if intN < 0 or intN > 100:
+        sys.exit('Informe um valor inteiro positivo')
 except ValueError:
     sys.exit('/nERRO: Informe um valor inteiro válido...')
 except Exception as e:
     sys.exit(f'ERRO:{e}')
 else:
-    numeros = list(range(-100, 101))
-    lista = random.sample(numeros , intN)
-    lista.sort()
-    print(f'lista:{lista}')
+    lista = [random.randint(-100, 101) for _ in range(intN)]
+    print('Lista original: ')
+    print(lista)
 
     lista_pares = [intN for intN in lista if intN % 2 == 0]
 print("Lista apenas com os números pares:")
