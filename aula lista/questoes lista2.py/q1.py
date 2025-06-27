@@ -41,8 +41,9 @@ for pos in range(len(lstNomes)):
    print(lstNomes[pos], lstnotas1[pos], lstnotas2 [pos])
 # ----------------------------------------------------------------------
 # Questão 02
+   lstboletins = list()
+   lstboletins.append
    
-
 # ----------------------------------------------------------------------
 # Questão 03
 
