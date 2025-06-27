@@ -1,4 +1,4 @@
-'''
+'''Add commentMore actions
    Fazer um programa que:
    
       1) Solicite ao usuário um valor inteiro N positivo (valor máximo para N -> 100);
@@ -22,26 +22,25 @@ else:
       sys.exit('\nERRO: Informe um valor entre 1 e 100...\n')
 
    # ----------------------------------------------------------------------
-   # Item 2
    lstValores = list()
+   lstRaizes  = list()
 
    intContador = 1
    while intContador <= intN :
+      # Gerando um número aleatório entre 0 e 1000 
       intValor = random.randint(0, 1000)
 
+      # Verificando de o valor gerado não está em lstValores
       if intValor not in lstValores:
+         # Adiciona o valor em lstValores
          lstValores.append(intValor)
+         # Calcula a raiz quadrada do valor gerado
+         floatRaiz = math.sqrt(intValor)
+         # Adiciona a raiz quadrada em lstRaizes
+         lstRaizes.append(floatRaiz)
+         # Incrementa o contador de números distintos gerados
          intContador += 1
 
    print(lstValores)
-
-   # ----------------------------------------------------------------------
-   # Item 3
-   lstRaizes = list()
-
-   for intValor in lstValores:
-      floatRaiz = math.sqrt(intValor)
-
-      lstRaizes.append(floatRaiz)
 
    print(lstRaizes)

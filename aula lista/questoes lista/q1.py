@@ -19,11 +19,20 @@ except ValueError:
 except Exception as e:
     sys.exit(f'ERRO:{e}')
 else:
-    lista = [random.randint(-100, 101) for _ in range(intN)]
+    #item 2
+    lista = list ()
+    for _ in range (intN):
+        intValor = random.randint(-100, 100)
+        lista.append(intValor)
+
     print('Lista original: ')
     print(lista)
-
-    lista_pares = [intN for intN in lista if intN % 2 == 0]
+ #item 3
+    lista_pares = list ()
+    for intValor in lista:
+        if intValor % 2 == 0:
+            lista_pares.append(intValor)
+            
 print("Lista apenas com os números pares:")
 print(lista_pares)
         

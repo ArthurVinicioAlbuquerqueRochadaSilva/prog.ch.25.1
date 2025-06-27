@@ -1,4 +1,4 @@
-'''
+'''Add commentMore actions
    Fazer um programa que:
    
       1) Solicite ao usuário um valor inteiro N positivo (valor máximo para N -> 100);
@@ -23,15 +23,7 @@ else:
 
    # ----------------------------------------------------------------------
    # Item 2
-   lstValores = list()
-
-   intContador = 1
-   while intContador <= intN :
-      intValor = random.randint(0, 1000)
-
-      if intValor not in lstValores:
-         lstValores.append(intValor)
-         intContador += 1
+   lstValores = random.sample(range(1001), intN)
 
    print(lstValores)
 

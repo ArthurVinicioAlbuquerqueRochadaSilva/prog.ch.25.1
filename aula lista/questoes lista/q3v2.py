@@ -10,7 +10,7 @@
 
          a) A primeira posição será o número anterior ao número da lista inicial;
          b) A segunda posição será o número da lista inicial; 
-         c) A terceira posição será o número seguinte ao númerio da lista inicial.
+         c) A terceira posição será o número seguinte ao número da lista inicial.
 '''
 import sys, random
 
@@ -25,21 +25,16 @@ else:
       sys.exit('\nERRO: Informe um valor entre 1 e 100...\n')
 
    # ----------------------------------------------------------------------
-   # Item 2
    lstValores = list()
+   lstTrios   = list()
 
    for _ in range(intN):
       intValor = random.randint(-100, +100)
 
       lstValores.append(intValor)
 
-   print(lstValores)
-
-   # ----------------------------------------------------------------------
-   # Item 3
-   lstTrios = list()
-
-   for intValor in lstValores:
       lstTrios.append([intValor-1, intValor, intValor+1])
+
+   print(lstValores)
 
    print(lstTrios)
