@@ -1,5 +1,3 @@
-
-from operator import truediv
 import os
 strDir = os.path.dirname(__file__)
 try: 
