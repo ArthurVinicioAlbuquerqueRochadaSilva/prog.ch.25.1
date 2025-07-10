@@ -19,7 +19,7 @@
       deverá ter o valor médio de compra, o valor médio de venda e o nome do mês. Separe os valores da 
       linha por ";";
 
-      dica biblioteca statisc e d
+      dica biblioteca statisc e datatime
 '''
 import os
 strDir = os.path.dirname(__file__)
@@ -41,4 +41,4 @@ else:
     
 
     print(lstCabecalho)
-    print(lstLinha)yurujei
+    print(lstLinha)
