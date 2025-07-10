@@ -42,3 +42,11 @@ print(lstCabecalho)
 for time in lstTimes:
    print(time)
 '''
+# Salvando a lista em um arquivo
+arqEscrita = open(f'{strDir}\\times_classificacao.csv', 'w', encoding='utf-8')
+strCabecalho = ';'.join(lstCabecalho)
+arqEscrita.write(f'{strCabecalho}\n')
+for time in lstTimes:
+   strLinha = ';'.join(str(i) for i in time)
+   arqEscrita.write(f'{strLinha}\n')
+arqEscrita.close()
