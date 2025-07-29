@@ -17,3 +17,12 @@ def mediaIFRN(nota1: int, nota2: int)-> int:
     media = (nota1 * 2 + nota2 * 3 )/ 5
     
     return int(round(media, 0))
+
+def situacaoFinal(media : int)-> str:
+    
+    if media >= 60: 
+        print('Aprovado')
+    elif media >= 20:
+        print('Prova final')
+    else:
+        print('Reprovado') 

@@ -14,3 +14,5 @@ else:
         print(f'ERRO: {erro}')
     else:
          print(f'Média = {mediaFinal}')
+    situcao = funcoes.situacaoFinal(mediaFinal)
+    print(situcao)
