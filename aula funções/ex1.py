@@ -1,4 +1,3 @@
-
 import sys, funcoes
 try:
     intE1 = int(input('Informe E1: '))

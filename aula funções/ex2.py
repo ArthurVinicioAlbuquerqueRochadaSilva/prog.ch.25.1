@@ -14,3 +14,6 @@ else:
       print(erro)
    else:
       print(tuplaAluno)
+
+
+      
