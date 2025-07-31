@@ -1,5 +1,3 @@
-from logging import exception
-
 
 def mediaIFRN(nota1: int, nota2: int)-> int:
     
