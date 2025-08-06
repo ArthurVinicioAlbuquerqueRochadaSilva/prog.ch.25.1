@@ -1,39 +1,24 @@
-import os, sys
+import sys, requests
 from datetime import datetime
 
-strDir = os.path.dirname(__file__)
-try: 
-    arqLeitura = open(f'{strDir}\\cotacao_dolar.csv','r', encoding = 'utf-8')
-except FileNotFoundError:
-    print('ERRO: Arquivo não encontrado')
-except Exception as erro:
-    print('ERRO: {erro}')
-else:
-    lstCabecalho = arqLeitura.readline().strip().split(';')
-    lstLinha = list()
-    lstAux = list()
-    lstCotacoes = list()
-    while True:
-        strLinha = arqLeitura.read().strip()
-        if not strLinha: break
-        
-        lstAux = strLinha.split(';')
+strURLMoedas  = 'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata'
+strURLMoedas += '/Moedas?$top=100&$format=json'
 
-        try:
-            lstAux.append(strLinha)
-            compra = float(lstAux[0].replace(',', '.'))
-            venda = float(lstAux[1].replace(',', '.'))
-            data = datetime.strptime(lstAux[2], '%d/%m/%Y').date()
-            
-            lstCotacoes.append([compra, venda, data])
-        except Exception as e:
-            sys.exit(f'ERRO: {e}')
+dicMoedas = requests.get(strURLMoedas).json()
 
-arqLeitura.close()
+strURLCotacoes  = 'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/'
+strURLCotacoes += 'CotacaoMoedaPeriodo(moeda=@moeda,dataInicial='
+strURLCotacoes += '@dataInicial,dataFinalCotacao=@dataFinalCotacao)?'
+strURLCotacoes += '@moeda=%27USD%27&@dataInicial=%2701-01-2023%27&'
+strURLCotacoes += '@dataFinalCotacao=%2712-31-2023%27&$format=json'
 
-if lstCotacoes:
-    print("\n--- Cotações do Dolar processadas --- ")
-    for cotacao in lstCotacoes:
-        print(f"Compra: {cotacao[0]: .3f} | Data: {cotacao[2].strftime('%d/%m/%Y')}")
-    
-    
+dicCotacoes = requests.get(strURLCotacoes).json()
+
+
+
+'''
+x = input('Digite o ano desejado: ')
+ano_int = int(x)
+ano = datetime(ano_int, 1, 1)
+print(ano)
+'''
