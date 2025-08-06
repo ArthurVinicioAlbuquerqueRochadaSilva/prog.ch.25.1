@@ -9,20 +9,15 @@ x = input('Digite  o ano desejado para o cartola: ')
 ano_int = int(x)
 ano = datetime(ano_int, 1, 1)
 print(f'Ano válido: {ano}')
-if ano == 2024:
-     #strNomeArq = f'{strDirApp}//cartola_fc_2024.json'
-elif ano == 2023:
-    #strNomeArq = f'{strDirApp}//cartola_fc_2023.json'
-elif ano == 2022:
-    #strNomeArq = f'{strDirApp}//cartola_fc_2022.json'
-elif ano == 2021:
-    #strNomeArq = f'{strDirApp}//cartola_fc_2021.json'
-else:
-    #dicCartola = requests.get(strURLCartola).json()
 
-'''
+
 try:
-   arqInput = open(strNomeArq, 'r', encoding='utf-8')
+   arqInput = open(f'strNomeArq{ano}', 'r', encoding='utf-8')
+   if ano == 2025:
+       #dicCartola = requests.get(strURLCartola).json()
+    elif ano < 2021:
+        sys.exit('Cartola só tem do ano 2021 até o atual')
+        
    strDados = arqInput.read()
    dictCartola = json.loads(strDados)
    arqInput.close()
@@ -78,5 +73,4 @@ else:
       strPosicaoAtleta   = dictCartola['posicoes'][str(atleta['posicao_id'])]['nome']
       # TODO: Obter a pontuação do atleta
       fltPontuacaoAtleta = ...
-      print(f'{atleta['nome']} ({atleta['apelido']}) - {strPosicaoAtleta} - {fltPontuacaoAtleta} pontos')   
-'''
+      print(f'{atleta['nome']} ({atleta['apelido']}) - {strPosicaoAtleta} - {fltPontuacaoAtleta} pontos')
