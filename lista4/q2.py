@@ -25,14 +25,14 @@ else:
 
    #lstChaves = list(dictCartola.keys())
    #print(lstChaves) # ['clubes', 'posicoes', 'status', 'atletas']
-   
+   '''
       dictCartola = { 'clubes':{...}, 'posicoes':{...}, 'status':{...}, 'atletas':[...] }
 
       dictCartola['clubes']    -> dicionário (k:v)
       dictCartola['posicoes']  -> dicionário (k:v)
       dictCartola['status']    -> dicionário (k:v)
       dictCartola['atletas']   -> lista (índice -> dicionário (k:v))
-
+   '''
 
    # Informando o nome do Clube
    strNomeClube = input('\nInforme o nome do Clube: ').strip().lower()
